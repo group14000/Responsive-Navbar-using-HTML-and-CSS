@@ -1,0 +1,46 @@
+<!-- HTML code for a webpage -->
+<!doctype html>
+<html>
+  <head>
+    <title>Codedamn HTML Playground</title>
+    <!-- The following meta tag helps to make the webpage responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Linking the font-awesome CSS file for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body>    
+    <!-- Navigation bar with logo and menu items -->
+    <nav class="navbar">
+      <!-- Left side of navbar with logo -->
+      <div class="left">
+        <h1>Navbar</h1>
+      </div>
+
+      <!-- Right side of navbar with menu items and icon for small screens -->
+      <div class="right">
+        <!-- Checkbox to toggle menu on small screens -->
+        <input type="checkbox" id="check">
+
+        <!-- Icon for the menu checkbox -->
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+        <!-- List of menu items -->
+        <ul class="list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Linking the JavaScript file at end of body for faster page load time-->
+    <script src="/script.js"></script>
+  </body>
+</html>

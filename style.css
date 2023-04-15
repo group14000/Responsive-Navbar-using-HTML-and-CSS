@@ -1,0 +1,99 @@
+/* Imports fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+/* Applies global styles to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Styles for the Navbar */
+.navbar {
+    background-color: rgb(22,7,36);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 5rem;
+}
+
+/* Styles for the left side of the Navbar */
+.left h1 {
+    font-size: 2.5rem;
+    cursor:pointer;
+}
+
+/* Styles for the checkbox button initially hidden on larger screens */
+.checkbtn {
+    display:none;
+}
+
+/* Styles for the checkbox input element initially hidden on larger screens */
+#check {
+    display:none; 
+}
+
+/* Styles for the checkbox button shown when checkbox is checked on smaller screens */
+.checkbtn {
+    cursor:pointer;
+    font-size:30px;
+    float:right;
+    color:#fff; /* Changed to white from black*/
+    line-height:80px; 
+}
+
+/* Styles for the right side of the Navbar containing a list of links */
+.right ul {
+	display:flex; 
+	list-style:none; 
+}
+
+.right ul li a {
+	padding:10px 20px; 
+	font-size:1.2rem; 
+	color:#fff; 
+	cursor:pointer; 
+	text-decoration:none; 
+	transition:all 1s ease-in-out;/* Added easing effect */	
+}
+
+.right ul li a:hover {
+	background-color:#fff; 
+	border-radius:7px; 
+	color:#160724;/* Changed to dark purple from black */	
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:805px) {
+
+	/* Styles for the list of links shown when checkbox is checked on smaller screens */
+	.list{
+	    width:100%;
+	    height:100vh;
+	    background-color:#160724;/* Changed to dark purple from black */	
+	    text-align:center;
+	    display:flex;
+	    flex-direction:column-reverse;/* Changed direction of column */
+	    position:relative;/* Changed to relative from fixed */	
+	    top:4rem;
+	    left:100%;
+	    transition:all 1s ease-in-out;
+	}
+
+	/* Styles for the checkbox input element initially hidden on smaller screens */
+	#check {
+	    display:none; 
+	}
+
+	/* Styles for the checkbox button shown when checkbox is checked on smaller screens */
+	.checkbtn {
+	    display:block; 
+	}
+
+	/* Selects all unordered lists that come immediately after a checked checkbox input element and shows the list by moving it in from the right side of the screen */
+	#check:checked ~ ul{
+		left:0%;
+	}
+}
